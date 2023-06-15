@@ -3,7 +3,7 @@
 	[Id] INT NOT NULL PRIMARY KEY IDENTITY,
 	[Titre] VARCHAR(100) NOT NULL,
 	Genre VARCHAR(50),
-	[DadeSortie] INT,
+	[DatedeSortie] INT,
 	Note INT NOT NULL
 	CONSTRAINT CK_Note CHECK (Note BETWEEN 0 AND 5)
 )

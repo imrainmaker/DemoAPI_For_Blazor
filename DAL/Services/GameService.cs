@@ -22,13 +22,13 @@ namespace DAL.Services
 
         public async Task<IEnumerable<Game>> GetAll()
         {
-            string sql = "SELECT * FROM Games";
+            string sql = "SELECT * FROM Game";
             return await connection.QueryAsync<Game>(sql);
         }
 
         public async Task<Game> GetById(int Id)
         {
-            string sql = "SELECT * FROM Games WHERE Id = @Id";
+            string sql = "SELECT * FROM Game WHERE Id = @Id";
         
             var param = new { Id = Id };
             return await connection.QueryFirstAsync<Game>(sql, param);
@@ -36,7 +36,7 @@ namespace DAL.Services
 
         public async Task CreateGame(Game g)
         {
-            string sql = "INSERT INTO Games (Titre, Genre, DateDeSortie, Note )" +
+            string sql = "INSERT INTO Game (Titre, Genre, DateDeSortie, Note )" +
                 " VALUES (@Titre, @Genre, @DateDeSortie, @Note)";
 
             await connection.ExecuteAsync(sql, g);

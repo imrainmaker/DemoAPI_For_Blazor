@@ -16,11 +16,11 @@ GO
 
 UPDATE Users SET IsAdmin = 1 WHERE Id = 1
 
-INSERT INTO Game (Titre, Note, DadeSortie, Genre) 
+INSERT INTO Game (Titre, Note, DatedeSortie, Genre) 
 VALUES ('Diablo 4', '3', 2023, 'Hack''n slash')
 
-INSERT INTO Game (Titre, Note, DadeSortie, Genre) 
+INSERT INTO Game (Titre, Note, DatedeSortie, Genre) 
 VALUES ('GTA 6', '0', 2047, 'On verra')
 
-INSERT INTO Game (Titre, Note, DadeSortie, Genre) 
+INSERT INTO Game (Titre, Note, DatedeSortie, Genre) 
 VALUES ('Modern Warfare 3', '2', 1982, 'FPS')
