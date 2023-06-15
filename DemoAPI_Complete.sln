@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32901.215
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DemoAPI_Complete", "DemoAPI_Complete\DemoAPI_Complete.csproj", "{B8611FC2-3BB7-496F-8A7A-47F9C7994687}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DemoAPI_Complete", "DemoAPI_Complete\DemoAPI_Complete.csproj", "{B8611FC2-3BB7-496F-8A7A-47F9C7994687}"
 EndProject
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "GameDB", "GameDB\GameDB.sqlproj", "{473281D0-CE32-44C0-A942-F1E30C7BF10B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "DAL\DAL.csproj", "{CB41C708-F301-44A7-ABCC-6CD55E664E1A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DAL", "DAL\DAL.csproj", "{CB41C708-F301-44A7-ABCC-6CD55E664E1A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
