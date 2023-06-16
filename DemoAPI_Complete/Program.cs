@@ -12,7 +12,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 builder.Services.AddSignalR();
-
+builder.Services.AddSingleton<ChatHub>();
 builder.Services.AddScoped<IGameRepository, GameService>(sp => 
     new GameService(
         new System.Data.SqlClient.SqlConnection(
@@ -23,9 +23,9 @@ var app = builder.Build();
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
+}
     app.UseSwagger();
     app.UseSwaggerUI();
-}
 
 app.UseCors(o => o.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
 app.UseHttpsRedirection();

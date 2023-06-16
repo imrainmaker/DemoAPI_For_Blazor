@@ -13,9 +13,9 @@ namespace DemoAPI_Complete.Controllers
     public class GameController : ControllerBase
     {
         private readonly IGameRepository gameService;
-        private readonly IHubContext<ListHub> _hubContext;
+        private readonly ListHub _hubContext;
 
-        public GameController(IGameRepository gameService, IHubContext<ListHub> hubContext)
+        public GameController(IGameRepository gameService, ListHub hubContext)
         {
             this.gameService = gameService;
             _hubContext = hubContext;
@@ -40,7 +40,7 @@ namespace DemoAPI_Complete.Controllers
                 return BadRequest();
 
             await gameService.CreateGame(game.ToDal());
-            await _hubContext.Clients.All.SendAsync("newGameList");
+            await _hubContext.UpdateGameList();
             return Ok();
         }
     }

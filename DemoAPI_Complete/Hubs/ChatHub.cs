@@ -10,9 +10,9 @@ namespace DemoAPI_Complete.Hubs
             await Clients.All.SendAsync("newMessage", user, message);
         }
 
-        public async Task UpdateGameList(Game g)
+        public async Task UpdateGameList()
         {
-            await Clients.All.SendAsync("newGameList", g);
+            await Clients.All.SendAsync("newGameList");
         }
     }
 }
